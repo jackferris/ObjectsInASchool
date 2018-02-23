@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects in a School</title>
+    <script src="objects.js"></script>
+    <script src="data.js"></script>
+    <script src="actions.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body onload="addToLists()">
+School System
+
+<div>
+<select id="items">
+    <option value="student">Students</option>
+    <option value="teacher">Teachers</option>
+    <option value="section">Sections</option></select>
+<button id="list" onclick="listItems()">List Items</button>
+</div>
+<div id ="listed"></div>
+
+
+<table id="table1">
+    <tr>
+        <td><select id="students"><option value="1">Select Student</option></select></td>
+        <td><select id="teachers"><option value="1">Select Teacher</option></select></td>
+        <td><select id="sections"><option value="1">Select Section</option></select></td>
+        <td><button id="addStudentToSection" onclick="addStudentToSection()">Add Student to Section</button></td>
+        <td><button id="addTeacherToSection" onclick="addTeacherToSection()">Add Teacher to Section</button></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="studentFirstName" value="" size="25" placeholder="first name"></td>
+        <td><input type="text" id="studentLastName" value="" size="25" placeholder="last name"></td>
+        <td><input type="text" id="studentGrade" value="" size="25" placeholder="grade"></td>
+        <td><button id="addStudent" onclick="addStudent()">Add Student</button></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="teacherFirstName" value="" size="25"placeholder="first name"></td>
+        <td><input type="text" id="teacherLastName" value="" size="25" placeholder="last name"></td>
+        <td><input type="text" id="teacherSubject" value="" size="25" placeholder="subject"></td>
+        <td><button id="addTeacher" onclick="addTeacher()">Add Teacher</button></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="sectionName" value="" size="25" placeholder="section name"></td>
+        <td><input type="text" id="sectionCount" value="" size="25" placeholder="section count"></td>
+        <td><button id="addSection" onclick="addSection()">Add Section</button></td>
+    </tr>
+</table>
+
+<div id="selectSection">
+    <select id="sections2"></select>
+    <button id="displayStudents" onclick="displayStudentsInSection()"> Display Students</button>
+</div>
+<div id="studentsInSection"></div>
+<div id="confirmation"></div>
+
+</body>
+</html>
